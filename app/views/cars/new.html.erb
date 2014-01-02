@@ -1,0 +1,8 @@
+<h1> Create a New Car </h1>
+
+<%= simple_form_for @car do |f| %>
+  <%= f.input :color, input_html: { maxlength: 20 } %>
+  <%= f.input :year %>
+  <%= f.input :mileage %>
+  <%= f.submit %>
+<% end %>
