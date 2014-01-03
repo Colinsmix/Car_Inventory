@@ -14,9 +14,9 @@ class CarsController < ApplicationController
     @car = Car.new(car_params)
 
     if @car.save
-      redirect_to '/cars/new', notice: 'Car Created Successfully!'  
+      redirect_to new_car_path, notice: 'Car Created Successfully!'  
     else
-      redirect_to '/cars/new', notice: 'Invalid Color'
+      render new_car_path, notice: 'Invalid Color'
     end
   end
 

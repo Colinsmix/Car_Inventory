@@ -1,8 +1,8 @@
 <h1> Create a New Car </h1>
 
-<%= simple_form_for @car do |f| %>
-  <%= f.input :color, input_html: { maxlength: 20 } %>
+<%= simple_form_for @car, error_class: :field_with_errors do |f| %>
+  <%= f.input :color, input_html: { maxlength: 20 }, hint: 'Invalid Color'  %>
   <%= f.input :year %>
   <%= f.input :mileage %>
-  <%= f.submit %>
+  <%= f.button :submit %>
 <% end %>
