@@ -16,7 +16,7 @@ class CarsController < ApplicationController
     if @car.save
       redirect_to '/cars/new', notice: 'Car Created Successfully!'  
     else
-      redirect_to '/cars/new', notice: 'Invalid Color'
+      render 'new', notice: 'Invalid Color'
     end
   end
 
