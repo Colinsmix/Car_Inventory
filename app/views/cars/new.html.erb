@@ -11,9 +11,11 @@
       </ul>
     </div>
   <% end %>
+<% end %>
 
+<%= simple_form_for @car, error_class: :field_with_errors do |f| %>
   <%= f.input :color, input_html: { maxlength: 20 } %>
   <%= f.input :year %>
   <%= f.input :mileage %>
-  <%= f.submit %>
+  <%= f.button :submit %>
 <% end %>

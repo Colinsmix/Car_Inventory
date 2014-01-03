@@ -8,7 +8,7 @@ feature "Record a New Car", %q(As a car salesperson
     fill_in 'Color', :with => 'Blue'
     fill_in 'Year', :with => 1985
     fill_in 'Mileage', :with => 95000.55
-    click_link 'Create Car'
+    click_button 'Create Car'
 
     expect(page).to have_content 'Create a New Car'
     expect(page).to have_content 'Car Created Successfully!'
@@ -16,8 +16,8 @@ feature "Record a New Car", %q(As a car salesperson
 
   scenario "Recording an invalid New Car" do
     visit'cars/new'
-    click_link 'Create Car'
-    expect(page).to have_content 'Invalid Color'
+    click_button 'Create Car'
+    expect(page).to have_content "Color can't be blank"
   end
   
 
